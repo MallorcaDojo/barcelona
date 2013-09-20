@@ -1,5 +1,6 @@
 package de.cofinpro.bierdeckel.repostories;
 
+import de.cofinpro.bierdeckel.domain.Account;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,6 +22,8 @@ public class SampleTest {
 
     @Test
     public void myTest() {
+                     new AccountContr
+            new Account();
          assertTrue(true);
     }
 
