@@ -14,6 +14,15 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
+    <feature name="Contacts">
+        <param name="ios-package" value="CDVContacts" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
     <access origin="http://127.0.0.1*" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="SuppressesIncrementalRendering" value="false" />
