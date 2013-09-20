@@ -1,9 +1,0 @@
-Dies ist der erste Commit
-
- - und dies der zweite
-
- -- dies die Dritte
-
- -- das ist Conrads test
-
- -- und das ist meiner ..
