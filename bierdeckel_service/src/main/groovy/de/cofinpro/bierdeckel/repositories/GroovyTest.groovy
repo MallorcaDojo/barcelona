@@ -8,4 +8,9 @@ package de.cofinpro.bierdeckel.repositories
  * To change this template use File | Settings | File Templates.
  */
 class GroovyTest {
+
+    void sayHello() {
+        println("Say Hello")
+        println("Say Hello")
+    }
 }
