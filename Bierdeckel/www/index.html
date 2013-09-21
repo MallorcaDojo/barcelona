@@ -9,6 +9,9 @@
         <script type="text/javascript" language="JavaScript">
 
             window.onload=function(){
+
+            var HOST = "http://localhost:8080/bierdeckel_service"
+
                 document.addEventListener("deviceready",onDeviceReady, false)
             }
 
@@ -31,8 +34,28 @@
                 } else {
                     alert("A party must be available");
                 }
+            }
 
 
+            function getParties(user_id){
+
+                var url = "http://127.0.0.1:8080/bierdeckel_service/parties/1" + user_id
+                var client = new XMLHttpRequest();
+
+                client.open("GET", url, false);
+                client.setRequestHeader("Content-Type", "text/plain");
+                client.send();
+                if (client.status == 200) {                    
+                    var response = client.responseText;
+                } else {
+                    onError();
+                }
+
+                var parties = JSON.parse(response);
+                for (var i=0; i<parties.length; i++){
+                    var element = parties[i];
+                    showParty(element);
+                }
             }
 
         </script>
@@ -45,7 +68,7 @@
         <label for="party">Party</label>
         <input type="text" id="party"/>    
         <input type="button" value="openParty" id="btnOpen" onClick="createNewParty()"/><br>
-        <input type="button" value="Donnerbuddy" id="btnDonBud"/>
+        <input type="button" value="Donnerbuddy" id="btnDonBud" onClick="getParties(1)"/>
         <input type="button" value="Drink" id="drink"/>
         <input type="button" value="Bill" id="bill"/>
         <br/><br/>
