@@ -5,18 +5,32 @@ import org.springframework.data.mongodb.core.mapping.Field
 
 /**
  * Created with IntelliJ IDEA.
- * User: mheck
+ * User: dawidk
  * Date: 20.09.13
- * Time: 18:32
+ * Time: 19:02
  * To change this template use File | Settings | File Templates.
  */
-class Drink extends AbsEntity {
+class Party extends AbsEntity{
+
     @Field("name")
     String name
 
-    @Field("price")
-    Double price
+    @Field("location")
+    String location
+
+    @Field("latitude")
+    String latitude
+
+    @Field("longitude")
+    String longitude
 
     @DBRef
-    DonnerBuddy donnerBuddy
+    List<Drink> drinks
+
+    @DBRef
+    List<DonnerBuddy> donnerBuddies
+
+
+
+
 }
