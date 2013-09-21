@@ -1,10 +1,7 @@
 package de.cofinpro.bierdeckel.controller;
 
 
-import de.cofinpro.bierdeckel.domain.Bill;
-import de.cofinpro.bierdeckel.domain.DonnerBuddy;
-import de.cofinpro.bierdeckel.domain.Drink;
-import de.cofinpro.bierdeckel.domain.Party;
+import de.cofinpro.bierdeckel.domain.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,13 +34,13 @@ public class PartyController implements PartyDao {
     }
 
 
-
-
-    @Override
     @ResponseBody
-    @RequestMapping(value = "/parties", method = RequestMethod.POST)
-    public Party addParty(@RequestBody DonnerBuddy buddy, @RequestBody Party party)  {
-        buddy.setId("12345");
+    @RequestMapping(value = "/test", method = RequestMethod.POST, consumes = "application/json")
+    public Party testParty(@RequestBody Person person)  {
+
+        System.out.println(person.getName());
+
+        /*buddy.setId("12345");
         buddy.setCreated(new Date());
         buddy.setUpdated(new Date());
         buddy.setVersion(0l);
@@ -54,9 +51,59 @@ public class PartyController implements PartyDao {
         party.setDonnerBuddies(new ArrayList<DonnerBuddy>());
         party.getDonnerBuddies().add(buddy);
         party.setId("12345");
+                */
+
+
+
+        return new Party();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/partytest", method = RequestMethod.POST, consumes = "application/json")
+    public Party testParty(@RequestBody Party party)  {
+
+        party.setVersion(0l);
+        party.setUpdated(new Date());
+        party.setCreated(new Date());
+        party.setId("12345");
+
+
+        if(party.getDonnerBuddies() != null && party.getDonnerBuddies().size() > 0) {
+            DonnerBuddy donnerBuddy = party.getDonnerBuddies().get(0);
+            donnerBuddy.setId("3432");
+            donnerBuddy.setCreated(new Date());
+            donnerBuddy.setUpdated(new Date());
+            donnerBuddy.setVersion(0l);
+
+        }
+
+
+
+        return party;
+    }
+
+
+
+    @Override
+    @ResponseBody
+    @RequestMapping(value = "/parties", method = RequestMethod.POST, consumes = "application/json")
+    public Party addParty(@RequestBody Party party)  {
+        if(party.getDonnerBuddies() != null && !party.getDonnerBuddies().isEmpty()) {
+            DonnerBuddy buddy = party.getDonnerBuddies().get(0);
+            buddy.setId("12345");
+            buddy.setCreated(new Date());
+            buddy.setUpdated(new Date());
+            buddy.setVersion(0l);
+        }
+
+
+        party.setVersion(0l);
+        party.setUpdated(new Date());
+        party.setCreated(new Date());
+        party.setId("12345");
 
        return party;
-    }
+}
 
 
     private static DonnerBuddy getDonnerBuddy(String id) {
@@ -118,7 +165,7 @@ public class PartyController implements PartyDao {
        for(int i=0;i<10;i++) {
           Party tmpParty = getParty(String.valueOf(i));
           parties.add(tmpParty);
-          tmpParty.setDonnerBuddies(null);
+          //tmpParty.setDonnerBuddies(null);
           tmpParty.setDrinks(null);
        }
 

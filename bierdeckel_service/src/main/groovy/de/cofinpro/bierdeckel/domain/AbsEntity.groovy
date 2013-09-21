@@ -17,7 +17,7 @@ import org.springframework.data.mongodb.core.mapping.Field
  * To change this template use File | Settings | File Templates.
  */
 @Document
-abstract class AbsEntity {
+abstract class AbsEntity implements Serializable {
     @Id
     String id
     @CreatedDate

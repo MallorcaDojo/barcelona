@@ -16,7 +16,7 @@ import java.util.List;
  */
 public interface PartyDao {
 
-    Party addParty(DonnerBuddy buddy, Party party);
+    Party addParty(Party party);
 
     List<Party> showParties(String buddyId);
 
