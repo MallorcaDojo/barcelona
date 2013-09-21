@@ -9,9 +9,14 @@ import org.springframework.data.mongodb.core.mapping.Field
  * Time: 17:16
  * To change this template use File | Settings | File Templates.
  */
-class Account extends AbsEntity {
+class DonnerBuddy extends AbsEntity {
     @Field("telefon_nr")
     String telefonNr
-    @Field("md5_pass")
-    String md5Pass
+
+    @Field("name")
+    String name;
+
+
+    List<Drink> drinks
+
 }
