@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -24,15 +5,65 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Bierdeckel</title>
+
+        <script type="text/javascript" language="JavaScript">
+
+            window.onload=function(){
+                document.addEventListener("deviceready",onDeviceReady, false)
+            }
+
+            function onDeviceReadey(){
+                document.getElementById('btnOpen').addEventListener('click', openParty, false);
+            }
+
+            function openParty(){
+                var newParty = document.getElementById("party");
+
+            }
+
+            function createNewParty(){
+                var partyDB = {};
+
+                var party= prompt("Party", "");
+
+                if(party == ""){
+                    alert("A party must be available");
+                } else {
+                    alert("A party must be available");
+                }
+
+
+            }
+
+        </script>
+
     </head>
     <body>
-        <div class="app">
-            <h1>Bierdeckel</h1>
+        
+        <h1>Bierdeckel - Applikation</h1>
+        <form>
+        <label for="party">Party</label>
+        <input type="text" id="party"/>    
+        <input type="button" value="openParty" id="btnOpen" onClick="createNewParty()"/><br>
+        <input type="button" value="Donnerbuddy" id="btnDonBud"/>
+        <input type="button" value="Drink" id="drink"/>
+        <input type="button" value="Bill" id="bill"/>
+        <br/><br/>
+        </form>
+        <H2>DonnerBuddy-Table</H2>
+        <table id="donnerBuddyTable" width="100%" border="0"/>
+
+        <H2>Drink-Table</H2>
+        <table id="drinktable" width="100%" border="0"/>
+
+        <!--<div class="app">
+            <h1>PhoneGap</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
-                <p class="event received">Loading is Finished</p>
+                <p class="event received">Device is Ready</p>
             </div>
-        </div>
+        </div> -->
+
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
