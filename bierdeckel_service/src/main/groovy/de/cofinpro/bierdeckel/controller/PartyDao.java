@@ -15,23 +15,14 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface PartyDao {
-    @ResponseBody
-    @RequestMapping(value = "/parties", method = RequestMethod.POST)
-    Party addParty(@RequestBody DonnerBuddy buddy, @RequestBody Party party);
 
-    @ResponseBody
-    @RequestMapping(value = "/parties/{buddyId}", method = RequestMethod.GET)
-    List<Party> showParties(@PathVariable String buddyId);
+    Party addParty(DonnerBuddy buddy, Party party);
 
-    @ResponseBody
-    @RequestMapping(value = "/parties/{partyId}", method = RequestMethod.POST)
-    DonnerBuddy addDonnerBuddy(@RequestBody DonnerBuddy buddy, @PathVariable String partyId);
+    List<Party> showParties(String buddyId);
 
-    @ResponseBody
-    @RequestMapping(value = "/drinks/{partyId}/{buddyId}", method = RequestMethod.POST)
-    Drink addDrink(@PathVariable String partyId, @PathVariable String buddyId, @RequestBody Drink drink);
+    DonnerBuddy addDonnerBuddy(DonnerBuddy buddy, String partyId);
 
-    @ResponseBody
-    @RequestMapping(value = "/drinks/{partyId}", method = RequestMethod.GET)
-    List<Drink> showDrinks(@PathVariable String partyId);
+    Drink addDrink(String partyId, String buddyId, Drink drink);
+
+    List<Drink> showDrinks(String partyId);
 }

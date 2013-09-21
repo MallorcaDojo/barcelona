@@ -1,12 +1,12 @@
 package de.cofinpro.bierdeckel.controller;
 
 
+import de.cofinpro.bierdeckel.domain.Bill;
+import de.cofinpro.bierdeckel.domain.DonnerBuddy;
+import de.cofinpro.bierdeckel.domain.Drink;
 import de.cofinpro.bierdeckel.domain.Party;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,14 +20,47 @@ import java.util.List;
  */
 
 @Controller
-public class PartyController {
+public class PartyController implements PartyDao {
 
-    public Party addEvent(Donnerbuddy buddy, Party party)  {
+    @Override
+    @ResponseBody
+    @RequestMapping(value = "/parties", method = RequestMethod.POST)
+    public Party addParty(@RequestBody DonnerBuddy buddy, @RequestBody Party party)  {
        return null;
     }
 
 
-    public List<Party> showParties(String donnerbuddyId) {
+    @Override
+    @ResponseBody
+    @RequestMapping(value = "/parties/{buddyId}", method = RequestMethod.GET)
+    public List<Party> showParties(@PathVariable String buddyId) {
       return null;
+    }
+
+    @Override
+    @ResponseBody
+    @RequestMapping(value = "/parties/{partyId}", method = RequestMethod.POST)
+    public DonnerBuddy addDonnerBuddy(@RequestBody DonnerBuddy buddy, @PathVariable String partyId)  {
+      return null;
+    }
+
+    @Override
+    @ResponseBody
+    @RequestMapping(value = "/drinks/{partyId}/{buddyId}", method = RequestMethod.POST)
+    public Drink addDrink(@PathVariable String partyId, @PathVariable String buddyId, @RequestBody Drink drink) {
+        return null;
+    }
+
+    @Override
+    @ResponseBody
+    @RequestMapping(value = "/drinks/{partyId}", method = RequestMethod.GET)
+    public List<Drink> showDrinks(@PathVariable String partyId) {
+        return null;
+    }
+
+    public Bill createBill(String partyId) {
+        Bill b = new Bill();
+
+        return b;
     }
 }
