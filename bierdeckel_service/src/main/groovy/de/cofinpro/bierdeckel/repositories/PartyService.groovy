@@ -25,9 +25,9 @@ class PartyService implements PartyDao {
     PartyRepository partyRepository
 
     @Override
-    Party addParty(DonnerBuddy buddy, Party party) {
+    Party addParty(Party party) {
         List<DonnerBuddy> buddies = new ArrayList<DonnerBuddy>()
-        buddies.add(buddy)
+        //buddies.add(buddy)
         party.setDonnerBuddies(buddies)
         partyRepository.save(party);
     }

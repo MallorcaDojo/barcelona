@@ -1,6 +1,5 @@
 package de.cofinpro.bierdeckel.repositories
 
-import de.cofinpro.bierdeckel.controller.CrudController
 import de.cofinpro.bierdeckel.domain.DonnerBuddy
 import org.springframework.data.repository.CrudRepository
 
