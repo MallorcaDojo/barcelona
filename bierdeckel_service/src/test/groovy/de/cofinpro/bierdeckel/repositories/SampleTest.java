@@ -32,8 +32,10 @@ public class SampleTest {
     @Test
     public void myTest() {
         DonnerBuddy donnerBuddy = new DonnerBuddy();
+        donnerBuddy.setName("I am the damn DonnerBuddy");
+        DonnerBuddy tmpDonnerBuddy = donnerBuddyCrudTest.save(donnerBuddy);
         //donnerBuddy.set
-         assertTrue(true);
+         assertTrue(tmpDonnerBuddy.getId() != null);
     }
 
 
