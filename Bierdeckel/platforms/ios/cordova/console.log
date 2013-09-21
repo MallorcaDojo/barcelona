@@ -1,4 +1,81 @@
-2013-09-20 18:50:01.083 HelloWorld[8552:c07] Multi-tasking -> Device: YES, App: YES
-2013-09-20 18:50:01.111 HelloWorld[8552:c07] Resetting plugins due to page load.
-2013-09-20 18:50:01.159 HelloWorld[8552:c07] Finished load of: file:///Users/dmoritz/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/36214AFC-147E-4BE5-9DBC-FD613CDBED6C/HelloWorld.app/www/index.html
+2013-09-20 19:54:57.812 HelloWorld[3501:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 19:54:57.871 HelloWorld[3501:c07] Resetting plugins due to page load.
+2013-09-20 19:54:57.931 HelloWorld[3501:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
 Terminating in response to SpringBoard's termination.
+2013-09-20 20:26:02.301 HelloWorld[3923:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 20:26:02.406 HelloWorld[3923:c07] Resetting plugins due to page load.
+2013-09-20 20:26:02.470 HelloWorld[3923:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 21:01:52.625 HelloWorld[4688:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 21:01:52.656 HelloWorld[4688:c07] Resetting plugins due to page load.
+2013-09-20 21:01:52.735 HelloWorld[4688:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-09-20 21:02:39.391 HelloWorld[5026:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 21:02:39.428 HelloWorld[5026:c07] Resetting plugins due to page load.
+2013-09-20 21:02:39.477 HelloWorld[5026:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-09-20 21:04:14.136 HelloWorld[5369:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 21:04:14.168 HelloWorld[5369:c07] Resetting plugins due to page load.
+2013-09-20 21:04:14.220 HelloWorld[5369:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-09-20 21:08:24.901 HelloWorld[5714:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 21:08:24.928 HelloWorld[5714:c07] Resetting plugins due to page load.
+2013-09-20 21:08:24.966 HelloWorld[5714:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-09-20 23:07:13.136 HelloWorld[6334:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:07:13.456 HelloWorld[6334:c07] Resetting plugins due to page load.
+2013-09-20 23:07:13.580 HelloWorld[6334:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-09-20 23:32:25.094 HelloWorld[7038:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:32:25.134 HelloWorld[7038:c07] Resetting plugins due to page load.
+2013-09-20 23:32:25.172 HelloWorld[7038:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-09-20 23:36:55.759 HelloWorld[7427:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:36:55.794 HelloWorld[7427:c07] Resetting plugins due to page load.
+2013-09-20 23:36:55.846 HelloWorld[7427:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 23:40:07.894 HelloWorld[7744:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:40:07.947 HelloWorld[7744:c07] Resetting plugins due to page load.
+2013-09-20 23:40:08.003 HelloWorld[7744:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-09-20 23:41:47.591 HelloWorld[8085:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:41:47.627 HelloWorld[8085:c07] Resetting plugins due to page load.
+2013-09-20 23:41:47.679 HelloWorld[8085:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 23:43:07.705 HelloWorld[8399:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:43:07.756 HelloWorld[8399:c07] Resetting plugins due to page load.
+2013-09-20 23:43:07.816 HelloWorld[8399:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 23:43:53.943 HelloWorld[8709:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:43:53.996 HelloWorld[8709:c07] Resetting plugins due to page load.
+2013-09-20 23:43:54.054 HelloWorld[8709:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 23:48:05.794 HelloWorld[9024:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:48:05.847 HelloWorld[9024:c07] Resetting plugins due to page load.
+2013-09-20 23:48:05.887 HelloWorld[9024:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 23:48:35.275 HelloWorld[9336:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:48:35.334 HelloWorld[9336:c07] Resetting plugins due to page load.
+2013-09-20 23:48:35.372 HelloWorld[9336:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 23:51:40.974 HelloWorld[9655:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:51:41.027 HelloWorld[9655:c07] Resetting plugins due to page load.
+2013-09-20 23:51:41.065 HelloWorld[9655:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-09-20 23:52:25.084 HelloWorld[9996:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:52:25.113 HelloWorld[9996:c07] Resetting plugins due to page load.
+2013-09-20 23:52:25.150 HelloWorld[9996:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 23:57:31.507 HelloWorld[10312:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:57:31.562 HelloWorld[10312:c07] Resetting plugins due to page load.
+2013-09-20 23:57:31.603 HelloWorld[10312:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-20 23:58:21.635 HelloWorld[10623:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-20 23:58:21.691 HelloWorld[10623:c07] Resetting plugins due to page load.
+2013-09-20 23:58:21.731 HelloWorld[10623:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-21 00:10:10.284 HelloWorld[10946:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-21 00:10:10.336 HelloWorld[10946:c07] Resetting plugins due to page load.
+2013-09-21 00:10:10.375 HelloWorld[10946:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-21 00:10:54.459 HelloWorld[11258:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-21 00:10:54.512 HelloWorld[11258:c07] Resetting plugins due to page load.
+2013-09-21 00:10:54.555 HelloWorld[11258:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-21 00:11:36.104 HelloWorld[11571:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-21 00:11:36.158 HelloWorld[11571:c07] Resetting plugins due to page load.
+2013-09-21 00:11:36.195 HelloWorld[11571:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-21 00:31:24.379 HelloWorld[11896:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-21 00:31:24.433 HelloWorld[11896:c07] Resetting plugins due to page load.
+2013-09-21 00:31:24.473 HelloWorld[11896:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
+2013-09-21 00:42:08.285 HelloWorld[12215:c07] Multi-tasking -> Device: YES, App: YES
+2013-09-21 00:42:08.339 HelloWorld[12215:c07] Resetting plugins due to page load.
+2013-09-21 00:42:08.381 HelloWorld[12215:c07] Finished load of: file:///Users/cdzimiera/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/9367BDC4-5BC9-4885-A674-09F029AAD9F1/HelloWorld.app/www/index.html
