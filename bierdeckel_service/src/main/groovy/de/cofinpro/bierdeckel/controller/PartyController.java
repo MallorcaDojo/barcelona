@@ -30,6 +30,14 @@ public class PartyController implements PartyDao {
          return getDonnerBuddy(String.valueOf("34"));
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/sampleparty", method = RequestMethod.GET)
+    public Party sampleParty() {
+        return getParty("343");
+    }
+
+
+
 
     @Override
     @ResponseBody
