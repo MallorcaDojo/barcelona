@@ -100,7 +100,10 @@ public class PartyController implements PartyDao {
 
        List<Party> parties = new ArrayList<Party>();
        for(int i=0;i<10;i++) {
-          parties.add(getParty(String.valueOf(i)));
+          Party tmpParty = getParty(String.valueOf(i));
+          parties.add(tmpParty);
+          tmpParty.setDonnerBuddies(null);
+          tmpParty.setDrinks(null);
        }
 
 
