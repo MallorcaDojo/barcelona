@@ -23,6 +23,14 @@ import java.util.List;
 @Controller
 public class PartyController implements PartyDao {
 
+
+    @ResponseBody
+    @RequestMapping(value = "/samplebuddy", method = RequestMethod.GET)
+    public DonnerBuddy sampleDonnerBuddy() {
+         return getDonnerBuddy(String.valueOf("34"));
+    }
+
+
     @Override
     @ResponseBody
     @RequestMapping(value = "/parties", method = RequestMethod.POST)
