@@ -24,22 +24,10 @@
 
             }
 
-            function createNewParty(){
-                var partyDB = {};
-
-                var party= prompt("Party", "");
-
-                if(party == ""){
-                    alert("A party must be available");
-                } else {
-                    alert("A party must be available");
-                }
-            }
-
 
             function getParties(user_id){
 
-                var url = "http://127.0.0.1:8080/bierdeckel_service/parties/1" + user_id
+                var url = "http://127.0.0.1:8080/bierdeckel_service/parties/" + user_id
                 var client = new XMLHttpRequest();
 
                 client.open("GET", url, false);
@@ -47,50 +35,138 @@
                 client.send();
                 if (client.status == 200) {                    
                     var response = client.responseText;
+                    alert("Response: " + response);
                 } else {
                     onError();
                 }
 
                 var parties = JSON.parse(response);
-                for (var i=0; i<parties.length; i++){
-                    var element = parties[i];
-                    showParty(element);
-                }
+
+                return parties;
+                // for (var i=0; i<parties.length; i++){
+                //     var element = parties[i];
+                //     showParty(element);
+                // }
             }
+
+            function createNewParty(){
+               var partyDB = {};
+
+               var party = document.getElementById("party").value;
+
+
+               if(party == ""){
+                   
+                   var parties = {};
+                    parties = getParties(1);
+                    addTableRow(parties,false);
+
+               } else {
+                   //alert("A party must be available");
+                   partyDB = { check : 0 , text : party};
+                   addTableRow(partyDB,false);
+               }
+           }
+
+           var rowID = 0;
+           function addTableRow(partyDB, appIsLoading)
+           {
+
+               rowID +=1;
+               var table = document.getElementById("partyTable");
+               var rowCount = table.rows.length;
+               var row = table.insertRow(rowCount);
+
+               var cell1 = row.insertCell(0);
+               var element1 = document.createElement("input");
+               element1.type = "text";
+               element1.name = "txtbox[]";
+               element1.size = 16;
+               element1.id = "text"+rowID;
+               element1.value = partyDB["text"];
+               element1.setAttribute("onchange","savePartyList()");
+               element1.className = "textbox";
+               cell1.appendChild(element1);
+
+           }
+
+           function savePartyList()
+           {
+               //Create a todoArray
+               var partyArray = {};
+               var textValue = "";
+
+               //Get current table
+               var table = document.getElementById("partyTable");
+               var rowCount = table.rows.length;
+
+               if (rowCount != 0)
+               {
+                   //Loop through all rows
+                   for(var i=0; i<rowCount; i++)
+                   {
+                       var row = table.rows[i];
+
+                       //Add text data
+                       var textbox = row.cells[1].childNodes[0];
+                       textValue = textbox.value;
+
+                       //Fill the array with check & text data
+                       partyArray["row"+i] =
+                       {
+                           text : textValue
+                       };
+
+                   }
+               }
+               else
+               {
+                   partyArray = null;
+               }
+
+               //Use local storage to persist data
+               //We use JSON to preserve objects
+
+               window.localStorage.setItem("partyList", JSON.stringify(partyArray));
+           }
+
 
         </script>
 
     </head>
-    <body>
-        
-        <h1>Bierdeckel - Applikation</h1>
-        <form>
-        <label for="party">Party</label>
-        <input type="text" id="party"/>    
-        <input type="button" value="openParty" id="btnOpen" onClick="createNewParty()"/><br>
-        <input type="button" value="Donnerbuddy" id="btnDonBud" onClick="getParties(1)"/>
-        <input type="button" value="Drink" id="drink"/>
-        <input type="button" value="Bill" id="bill"/>
-        <br/><br/>
-        </form>
-        <H2>DonnerBuddy-Table</H2>
-        <table id="donnerBuddyTable" width="100%" border="0"/>
+      <body>
 
-        <H2>Drink-Table</H2>
-        <table id="drinktable" width="100%" border="0"/>
+       <h1>Bierdeckel - Applikation</h1>
+       <form>
+       <label for="party">Party</label>
+       <input type="text" id="party"/>    
+       <input type="button" value="openParty" id="btnOpen" onClick="createNewParty()"/><br>
+       <input type="button" value="Donnerbuddy" id="btnDonBud"/>
+       <input type="button" value="Drink" id="drink"/>
+       <input type="button" value="Bill" id="bill"/>
+       <br/><br/>
+       </form>
+        <H2>Party-Table</H2>
+       <table id="partyTable" width="100%" border="0"/>
 
-        <!--<div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div> -->
+       <H2>DonnerBuddy-Table</H2>
+       <table id="donnerBuddyTable" width="100%" border="0"/>
 
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+       <H2>Drink-Table</H2>
+       <table id="drinktable" width="100%" border="0"/>
+
+       <!--<div class="app">
+           <h1>PhoneGap</h1>
+           <div id="deviceready" class="blink">
+               <p class="event listening">Connecting to Device</p>
+               <p class="event received">Device is Ready</p>
+           </div>
+       </div> -->
+
+       <script type="text/javascript" src="phonegap.js"></script>
+       <script type="text/javascript" src="js/index.js"></script>
+       <script type="text/javascript">
+           app.initialize();
+       </script>
+   </body>
 </html>
