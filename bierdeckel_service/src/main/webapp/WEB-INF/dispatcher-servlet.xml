@@ -14,14 +14,14 @@
        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
        http://www.springframework.org/schema/data/mongo
        http://www.springframework.org/schema/data/mongo/spring-mongo-1.2.xsd">
- 
+
     <context:component-scan base-package="de.cofinpro.bierdeckel" />
- 
+
     <!-- Factory bean that creates the Mongo instance -->
     <bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
         <property name="host" value="localhost" />
     </bean>
-     
+
     <!-- MongoTemplate for connecting and quering the documents in the database -->
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg name="mongo" ref="mongo" />
@@ -37,8 +37,8 @@
 
     <!-- Use this post processor to translate any MongoExceptions thrown in @Repository annotated classes -->
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-     
-    
+
+
     <mvc:annotation-driven />
     <!--
     <mvc:resources mapping="/resources/**" location="/resources" />
@@ -46,6 +46,6 @@
     <bean id="jspViewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/views/"
-          p:suffix=".jspx" /> 
-    
+          p:suffix=".jspx" />
+
 </beans>
