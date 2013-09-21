@@ -1,6 +1,6 @@
-package de.cofinpro.bierdeckel.repostories;
+package de.cofinpro.bierdeckel.repositories;
 
-import de.cofinpro.bierdeckel.domain.Account;
+import de.cofinpro.bierdeckel.domain.DonnerBuddy;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +25,14 @@ public class SampleTest {
     @Autowired
     MongoTemplate mongoTemplate;
 
+    @Autowired
+    DonnerBuddyCrudTest donnerBuddyCrudTest;
+
+
     @Test
     public void myTest() {
-
+        DonnerBuddy donnerBuddy = new DonnerBuddy();
+        //donnerBuddy.set
          assertTrue(true);
     }
 
