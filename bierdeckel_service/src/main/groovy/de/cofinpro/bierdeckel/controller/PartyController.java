@@ -118,8 +118,8 @@ public class PartyController implements PartyDao {
 
     private static Party getParty(String id) {
         Party party = new Party();
-        party.setId(id);
         party.setName("My Buddies Party " + id);
+        party.setId(id);
         party.setUpdated(new Date());
         party.setCreated(new Date());
         party.setDonnerBuddies(new ArrayList<DonnerBuddy>());

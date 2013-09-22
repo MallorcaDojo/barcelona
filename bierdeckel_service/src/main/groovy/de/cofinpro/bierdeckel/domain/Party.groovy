@@ -12,6 +12,9 @@ import org.springframework.data.mongodb.core.mapping.Field
  */
 class Party extends AbsEntity{
 
+	@Field("id")
+	String element_id
+
     @Field("name")
     String name
 

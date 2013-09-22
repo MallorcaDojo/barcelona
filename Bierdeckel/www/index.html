@@ -20,7 +20,15 @@
             }
 
             function createNewParty(){
-                prompt("Name der neuen Party?", "OK");
+                var party = prompt("Name der neuen Party?", "OK");
+
+                if(party == ""){
+                    alert("A party must be available");
+                } else {
+                    
+                    //send POST request to create Party
+                }
+
 
             }
 
@@ -35,7 +43,7 @@
                 client.send();
                 if (client.status == 200) {                    
                     var response = client.responseText;
-                    //alert("Response: " + response);
+                    alert("Response: " + response);
                 } else {
                     onError();
                 }
@@ -77,21 +85,22 @@
 
             for (var i=0; i<=partyDB.length; i++){
                 var party = partyDB[i];
-
-                var row = table.insertRow(table.rows.length);
-                var cell1 = row.insertCell(0);
-                var element1 = document.createElement("input");
-                element1.type = "text";
-                element1.name = "txtbox[]";
-                element1.size = 16;
-                element1.id = "party_" + party["id"];
-                element1.value = party["name"];
-                element1.setAttribute("onchange","savePartyList()");
-                element1.className = "textbox";
-                cell1.appendChild(element1);
+                var element_id = "party_" + party["id"];
+                //if (document.getElementById(element_id) == null) {
+                    var row = table.insertRow(table.rows.length);
+                    var cell1 = row.insertCell(0);
+                    var element1 = document.createElement("input");
+                    element1.type = "text";
+                    element1.name = "txtbox[]";
+                    element1.size = 16;
+                    element1.id = element_id;
+                    element1.value = party["name"];
+                    element1.setAttribute("onchange","savePartyList()");
+                    element1.className = "textbox";
+                    cell1.appendChild(element1);
+               // }
             }
-
-           }
+            }
 
            function savePartyList()
            {
