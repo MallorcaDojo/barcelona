@@ -19,8 +19,8 @@
                 document.getElementById('btnOpen').addEventListener('click', openParty, false);
             }
 
-            function openParty(){
-                var newParty = document.getElementById("party");
+            function createNewParty(){
+                prompt("Name der neuen Party?", "OK");
 
             }
 
@@ -35,7 +35,7 @@
                 client.send();
                 if (client.status == 200) {                    
                     var response = client.responseText;
-                    alert("Response: " + response);
+                    //alert("Response: " + response);
                 } else {
                     onError();
                 }
@@ -49,7 +49,7 @@
                 // }
             }
 
-            function createNewParty(){
+            function showParties(){
                var partyDB = {};
 
                var party = document.getElementById("party").value;
@@ -72,21 +72,24 @@
            function addTableRow(partyDB, appIsLoading)
            {
 
-               rowID +=1;
-               var table = document.getElementById("partyTable");
-               var rowCount = table.rows.length;
-               var row = table.insertRow(rowCount);
+            rowID +=1;
+            var table = document.getElementById("partyTable");
 
-               var cell1 = row.insertCell(0);
-               var element1 = document.createElement("input");
-               element1.type = "text";
-               element1.name = "txtbox[]";
-               element1.size = 16;
-               element1.id = "text"+rowID;
-               element1.value = partyDB["text"];
-               element1.setAttribute("onchange","savePartyList()");
-               element1.className = "textbox";
-               cell1.appendChild(element1);
+            for (var i=0; i<=partyDB.length; i++){
+                var party = partyDB[i];
+
+                var row = table.insertRow(table.rows.length);
+                var cell1 = row.insertCell(0);
+                var element1 = document.createElement("input");
+                element1.type = "text";
+                element1.name = "txtbox[]";
+                element1.size = 16;
+                element1.id = "party_" + party["id"];
+                element1.value = party["name"];
+                element1.setAttribute("onchange","savePartyList()");
+                element1.className = "textbox";
+                cell1.appendChild(element1);
+            }
 
            }
 
@@ -141,6 +144,7 @@
        <label for="party">Party</label>
        <input type="text" id="party"/>    
        <input type="button" value="openParty" id="btnOpen" onClick="createNewParty()"/><br>
+       <input type="button" value="loadParties" id="btnLoadParty" onClick="showParties()"/><br>
        <input type="button" value="Donnerbuddy" id="btnDonBud"/>
        <input type="button" value="Drink" id="drink"/>
        <input type="button" value="Bill" id="bill"/>

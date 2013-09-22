@@ -47,20 +47,12 @@ var app = {
         console.log('Received Event: ' + id);
     }
 
-    // process the confirmation dialog result
-    function onConfirm(buttonIndex) {
-        alert('You selected button ' + buttonIndex);
+    navigator.notification.alert(message, alertCallback, [title], [buttonName])
+
+    showAlert: function() {
+        navigator.notification.alert("Hello Bierdeckel", function(){return false;}
+            , "Alert", "Bitte Konfirmen");
+        console.log("KMbutton clicked!")
     }
 
-    // Show a custom confirmation dialog
-    //
-    function showConfirm() {
-        navigator.notification.confirm(
-            'You are the winner!',  // message
-            onConfirm,              // callback to invoke with index of button pressed
-            'Game Over',            // title
-            'Restart,Exit'          // buttonLabels
-        );
-    }
-}
-
+};

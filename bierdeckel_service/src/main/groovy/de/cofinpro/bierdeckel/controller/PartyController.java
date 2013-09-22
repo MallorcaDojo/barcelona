@@ -119,13 +119,13 @@ public class PartyController implements PartyDao {
     private static Party getParty(String id) {
         Party party = new Party();
         party.setId(id);
-        party.setName("sfsdf" + id);
+        party.setName("My Buddies Party " + id);
         party.setUpdated(new Date());
         party.setCreated(new Date());
         party.setDonnerBuddies(new ArrayList<DonnerBuddy>());
         party.setDrinks(new ArrayList<Drink>());
 
-        for(int i=0;i<10;i++) {
+        for(int i=0;i<4;i++) {
             DonnerBuddy donnerBuddy = getDonnerBuddy(String.valueOf(i));
             party.getDonnerBuddies().add(donnerBuddy);
         }
@@ -162,7 +162,7 @@ public class PartyController implements PartyDao {
     public List<Party> showParties(@PathVariable String buddyId) {
 
        List<Party> parties = new ArrayList<Party>();
-       for(int i=0;i<10;i++) {
+       for(int i=0;i<3;i++) {
           Party tmpParty = getParty(String.valueOf(i));
           parties.add(tmpParty);
           //tmpParty.setDonnerBuddies(null);
